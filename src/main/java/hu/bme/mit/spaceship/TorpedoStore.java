@@ -13,7 +13,7 @@ public class TorpedoStore {
   private double FAILURE_RATE = 0.0; //NOSONAR
 
   private int torpedoCount = 0;
-
+  // Reuse the same Random instance instead of creating a new one for each firing attempt.
   private Random generator = new Random();
 
   public TorpedoStore(int numberOfTorpedos){
